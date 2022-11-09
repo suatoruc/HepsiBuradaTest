@@ -38,7 +38,7 @@ klasörünün path'i ni alıp konsolda aşağıdaki gibi yazıp çalıştırmam�
   Rapor Formantında Bize Gösteriyor.
   ![Report1](/pngs/rapor1.png "Raporu Görseli")
 - 
-  ![Report1](/pngs/rapor2.png "Raporu Görseli")
+  ![Report2](/pngs/rapor2.png "Raporu Görseli")
 
 - Rapor içinde kullanılan parametrelerde görülebilecek şekilde modifikasyon yapıldı.
 
