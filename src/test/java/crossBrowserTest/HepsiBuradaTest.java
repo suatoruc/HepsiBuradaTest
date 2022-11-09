@@ -1,4 +1,6 @@
 package crossBrowserTest;
+import io.qameta.allure.Severity;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 
 
@@ -6,6 +8,7 @@ import org.testng.annotations.Test;
 public class HepsiBuradaTest extends WebLocates {
 
 
+   @Story("Hepsiburada Test Senaryosu")
     @Test(description = "Urun Secimi ve Dogrulama Islemleri")
      public void HepsiburadaTest(){
         anasayfa_ac("Hepsiburada");

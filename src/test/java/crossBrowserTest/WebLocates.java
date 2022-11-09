@@ -34,12 +34,14 @@ public class WebLocates extends TestBaseCross{
 
 
 
+    @Step("{0} Sayfasi Acilir")
     public void anasayfa_ac(String sayfaAdi){
         driver.get(ConfigReader.getProperty(sayfaAdi));
         TestBaseCross.waitForPageToLoad(5);
       //  driver.findElement(cookie_accept_button).click();
     }
 
+    @Step("Sayfanin Acildigi Dogrulanir")
     public void anasayfa_acildiginin_dogrulamasi(){
         TestBaseCross.waitForPageToLoad(5);
         actual=driver.getCurrentUrl();
@@ -48,6 +50,7 @@ public class WebLocates extends TestBaseCross{
     }
 
 
+    @Step("Urun Sayfasindaki Menuden {0} KAtegorisinden {1} Altkategorsindeki {0} Urun Secilir")
     public void urun_sec(String Katergori,String AltKategori,String Urun){
         TestBaseCross.hover(driver.findElement(By.xpath("//span[starts-with(@class,'sf-MenuItems')]/span[text()='"+Katergori+"']")));
         TestBaseCross.waitFor(3);
@@ -57,6 +60,7 @@ public class WebLocates extends TestBaseCross{
 
     }
 
+    @Step("Urun Sayfasindan {0} Secildigi Dogrulanir")
     public void urun_secimi_dogrulamasi(String urunAdi){
         TestBaseCross.waitForPageToLoad(5);
         actual=driver.getCurrentUrl();
@@ -66,6 +70,7 @@ public class WebLocates extends TestBaseCross{
     }
 
 
+    @Step("Marka Filitrelemesi {0} Secilerek Yapilir ")
     public void marka_filitrelemesi_yap(String Marka){
         driver.navigate().refresh();
         TestBaseCross.waitForPageToLoad(5);
@@ -79,6 +84,7 @@ public class WebLocates extends TestBaseCross{
 
     }
 
+    @Step("Siralama Menusunden {0} Secilir")
     public void liste_siralamasi_yapma(String SiralamaSekli){
           TestBaseCross.waitForPageToLoad(10);
          TestBaseCross.scrollIntoView(driver.findElement(sortingBar_button));
@@ -118,6 +124,7 @@ public class WebLocates extends TestBaseCross{
     }
 
 
+    @Step("Urun Sayfasinda {0}. Urun Sepete Eklenir ")
     public void urun_sec(int UrunSirasi){
         driver.navigate().refresh();
         TestBaseCross.waitFor(3);
@@ -133,16 +140,19 @@ public class WebLocates extends TestBaseCross{
     }
 
 
+    @Step("Sepete Eklenen Urunun Dogrulamasi Yapilir")
     public void sepete_uruneklenmesi_dogrulamasi(){
         TestBaseCross.fluentWait(driver.findElement(add_card_after_toastcontainer_mesaj),10);
         Assert.assertTrue(driver.findElement(add_card_after_toastcontainer_mesaj).isDisplayed());
     }
 
+    @Step("Sepet Sayfasi Acilir")
     public void sepet_sayfasini_ac(){
         TestBaseCross.scrollIntoView(driver.findElement(card_button));
         driver.findElement(card_button).click();
     }
 
+    @Step("Sepet Sayfasinda Urun Dogrulamasi Yapilir")
     public void sepet_sayfasinda_urun_dogrulamasi(){
         TestBaseCross.waitForPageToLoad(5);
         List<WebElement>urunTitles=driver.findElements(cardPage_products_names);
@@ -152,6 +162,7 @@ public class WebLocates extends TestBaseCross{
         Assert.assertEquals(actual,urunTitle);
     }
 
+    @Step("Alış-Verisi Tamamla Butonuna Tiklanilir")
     public void alisverisi_tamamla_button_click(){
         driver.findElement(alisverisi_tamamla_button).click();
     }

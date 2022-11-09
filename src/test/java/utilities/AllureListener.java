@@ -9,7 +9,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class AllureListener implements ITestListener {
-    private static WebDriver driver= Driver.getDriver();
+
 
 
 private static String getTestMethodName(ITestResult iTestResult){
@@ -28,7 +28,7 @@ private static String getTestMethodName(ITestResult iTestResult){
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println((iTestContext.getName())+" Class'ında Testler Çalıştırıldı");
-        iTestContext.setAttribute("Webdriver", driver);
+        iTestContext.setAttribute("Webdriver", Driver.getDriver());
     }
     @Override
     public void onFinish(ITestContext iTestContext) {
@@ -69,13 +69,6 @@ private static String getTestMethodName(ITestResult iTestResult){
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult){
            System.out.println((getTestMethodName(iTestResult) + "test başarısız Oldu Ancak Tanımlanmış Başarı Oranında"));
        }
-
-
-
-
-
-
-
 
 }
 
