@@ -40,7 +40,7 @@ klasörünün path'i ni alıp konsolda aşağıdaki gibi yazıp çalıştırmam�
 - 
   ![Report2](/pngs/rapor2.png "Raporu Görseli")
 
-- Rapor içinde kullanılan parametrelerde görülebilecek şekilde modifikasyon yapıldı.
+- Rapor içinde kullanılan parametrelerinde görülmesi için rapor formatında gerekli olan modifikasyonlar yapıldı.
 
 ### Multibrowser ile Testleri Çoklu Browserlarda Çalıştırma
 - Testcase de istenildiği gibi testlerin **Firefox, Chrome ve Edge** de çalıştırılması için 
