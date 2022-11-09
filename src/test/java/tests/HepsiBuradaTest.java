@@ -6,7 +6,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import page.WebLocates;
 import utilities.AllureListener;
-
 import java.lang.reflect.Method;
 
 @Listeners({AllureListener.class})
@@ -29,9 +28,6 @@ public class HepsiBuradaTest extends WebLocates {
         alisverisi_tamamla_button_click();
         login_ekrani_dogrulamasi();
         browser_penceresini_kapat();
-
-
-
 
     }
 }

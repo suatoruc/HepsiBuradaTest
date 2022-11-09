@@ -15,7 +15,7 @@ import java.util.List;
 
 public class WebLocates  {
 
-    WebDriver driver= Driver.getDriver(ConfigReader.getProperty("browser"));
+    WebDriver driver= Driver.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     WebElement siralamaIstemi;
     String actual;
@@ -150,7 +150,8 @@ public class WebLocates  {
         ReusableMethods.waitForPageToLoad(5);
         List<WebElement>urunTitles=driver.findElements(cardPage_products_names);
         actual=urunTitles.get(0).getText();
-        System.out.println(actual + "\n" + urunTitle);
+        actual=actual.substring(0,urunTitle.length());
+        //System.out.println(actual + "\n" + urunTitle);
         Assert.assertEquals(actual,urunTitle);
     }
     @Step("Sepet Sayfasinda Alisverisi Tamamla Butonuna Basilir")

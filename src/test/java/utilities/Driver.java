@@ -20,9 +20,9 @@ public class Driver {
 
 
 
-    @Parameters("browser")
-    public static WebDriver getDriver(@Optional String browser) {
-        browser = browser == null ? ConfigReader.getProperty("browser") : browser;
+
+    public static WebDriver getDriver() {
+
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":

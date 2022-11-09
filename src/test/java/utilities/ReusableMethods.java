@@ -12,7 +12,7 @@ import java.util.function.Function;
 
 public class ReusableMethods {
     private static int timeout = 5;
-    private static WebDriver driver= Driver.getDriver(ConfigReader.getProperty("browser"));
+    private static WebDriver driver= Driver.getDriver();
 
     public static void switchToWindow(String targetTitle) {
         String origin =driver.getWindowHandle();

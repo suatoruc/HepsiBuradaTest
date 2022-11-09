@@ -9,7 +9,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class AllureListener implements ITestListener {
-    private static WebDriver driver= Driver.getDriver(ConfigReader.getProperty("browser"));
+    private static WebDriver driver= Driver.getDriver();
 
 
 private static String getTestMethodName(ITestResult iTestResult){
@@ -48,7 +48,7 @@ private static String getTestMethodName(ITestResult iTestResult){
     public void onTestFailure(ITestResult iTestResult) {
         System.out.println((getTestMethodName(iTestResult) + " test is failed."));
         Object testClass = iTestResult.getInstance();
-        WebDriver driver= Driver.getDriver(ConfigReader.getProperty("browser"));
+        WebDriver driver= Driver.getDriver();
 
         if (driver instanceof WebDriver) {
 
