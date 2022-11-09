@@ -137,7 +137,8 @@ public class WebLocates  {
 
     @Step("Ekleme Isleminin Yapildigi ToastContainer Mesaji ile Dogrulanir")
     public void sepete_uruneklenmesi_dogrulamasi(){
-        ReusableMethods.fluentWait(driver.findElement(add_card_after_toastcontainer_mesaj),3);
+        //ReusableMethods.fluentWait(driver.findElement(add_card_after_toastcontainer_mesaj),3);
+        ReusableMethods.waitFor(2);
         Assert.assertTrue(driver.findElement(add_card_after_toastcontainer_mesaj).isDisplayed());
     }
     @Step("Sepet Sayfasi Acilir")
