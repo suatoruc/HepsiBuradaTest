@@ -27,12 +27,12 @@ private static String getTestMethodName(ITestResult iTestResult){
 
     @Override
     public void onStart(ITestContext iTestContext) {
-        System.out.println((iTestContext.getName()));
+        System.out.println((iTestContext.getName())+" Class'ında Testler Çalıştırıldı");
         iTestContext.setAttribute("Webdriver", driver);
     }
     @Override
     public void onFinish(ITestContext iTestContext) {
-        System.out.println((iTestContext.getName()));
+        System.out.println((iTestContext.getName())+" Class'ında Testlerin Çalıştırılması Bitirildi.");
 
     }
     @Override
