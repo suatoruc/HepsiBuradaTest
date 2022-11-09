@@ -21,7 +21,8 @@
 
 - Aynı test senaryosu farklı browserlarda da çalışması için framework de kullanılan driver class'ı tekrar modifiye edilerek 
 framework içinde farklı class içinde kullanıldı. </p>
-![crossBrowser](pngs/crosPages.jpg "Crossbrowser Testi İçin Framework İçinde Yapılan Modifikasyon )
+![crossBrowser](pngs/crosPages.jpg "Crossbrowser Testi İçin Framework İçinde Yapılan Modifikasyon")
+- 
 - Test steplerinde de görüldüğü gibi secim işlemlerini dinamik yapabilme adına metot dizaynları buna göre yapıldı.
 - Kullanılan *kategori secimi, filitreleme ve sıralama işlemleri* istenildiğinde değiştirilebilecek şekilde dinamik olarak tasarlandı.
 - Framework içinde page sayfaları özellikle **Selenium 4** den sonra öne çıkan **By Metot** yapısı ile oluşturuldu.
