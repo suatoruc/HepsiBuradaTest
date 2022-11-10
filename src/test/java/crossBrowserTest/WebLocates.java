@@ -3,8 +3,12 @@ package crossBrowserTest;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utilities.ConfigReader;
+
+import java.time.Duration;
 import java.util.List;
 
 public class WebLocates extends TestBaseCross{
@@ -142,7 +146,8 @@ public class WebLocates extends TestBaseCross{
 
     @Step("Sepete Eklenen Urunun Dogrulamasi Yapilir")
     public void sepete_uruneklenmesi_dogrulamasi(){
-        TestBaseCross.fluentWait(driver.findElement(add_card_after_toastcontainer_mesaj),10);
+        //TestBaseCross.waitForVisibility(driver.findElement(add_card_after_toastcontainer_mesaj),5);
+        WebElement toastContainer=new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(add_card_after_toastcontainer_mesaj));
         Assert.assertTrue(driver.findElement(add_card_after_toastcontainer_mesaj).isDisplayed());
     }
 

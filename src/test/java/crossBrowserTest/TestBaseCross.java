@@ -39,6 +39,10 @@ public class TestBaseCross {
             }
         }
     }
+    public static WebElement waitForVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
 
     public static void hover(WebElement element) {
         Actions actions = new Actions(driver);
